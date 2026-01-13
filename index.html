@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Дмитрий Брагин — ML Engineer</title>
+  <meta name="description" content="Machine Learning Engineer specializing in Computer Vision, MLOps, and Python automation. Portfolio, projects, and resume.">
+  <style>
+    :root {
+      --text: #333;
+      --bg: #fff;
+      --accent: #2563eb;
+      --light-gray: #f5f7fa;
+      --border: #e0e0e0;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      color: #555;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    .contacts a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 0.6rem;
+    }
+    .contacts a:hover {
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .project {
+      margin-bottom: 1.2rem;
+    }
+    .project h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+    .tech {
+      display: inline-block;
+      background: var(--light-gray);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      margin-right: 0.4rem;
+      margin-top: 0.3rem;
+    }
+    .actions {
+      background: var(--light-gray);
+      padding: 1.2rem;
+      border-radius: 8px;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .actions a {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      margin: 0 0.5rem;
+    }
+    .actions a:hover {
+      opacity: 0.9;
+    }
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    @media (max-width: 600px) {
+      body { padding: 1.2rem 0.8rem; }
+      h1 { font-size: 1.8rem; }
+      .actions a { display: block; margin: 0.6rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Дмитрий Брагин</h1>
+    <div class="subtitle">ML Engineer • Computer Vision • MLOps • Python</div>
+    <div class="contacts">
+      <a href="mailto:your.email@example.com">📧 Email</a>
+      <a href="https://github.com/bragind" target="_blank">🐙 GitHub</a>
+      <a href="https://t.me/yourusername" target="_blank">💬 Telegram</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">🔗 LinkedIn</a>
+    </div>
+  </header>
+
+  <div class="actions">
+    <a href="resume.pdf" target="_blank">📄 Скачать PDF-резюме</a>
+    <a href="https://github.com/bragind" target="_blank">📁 Все проекты на GitHub</a>
+  </div>
+
+  <section>
+    <h2>Ключевые навыки</h2>
+    <p>
+      <span class="tech">Python</span>
+      <span class="tech">PyTorch</span>
+      <span class="tech">OpenCV</span>
+      <span class="tech">Computer Vision</span>
+      <span class="tech">MLOps</span>
+      <span class="tech">Docker</span>
+      <span class="tech">CI/CD</span>
+      <span class="tech">FastAPI</span>
+      <span class="tech">Linux</span>
+      <span class="tech">LLM / RAG</span>
+      <span class="tech">ROS2</span>
+      <span class="tech">STM32</span>
+    </p>
+  </section>
+
+  <section>
+    <h2>Проекты</h2>
+
+    <div class="project">
+      <h3>🛰️ Анализ спутниковых снимков</h3>
+      <p>Сегментация зданий и расчёт площади застройки (м²) с помощью PyTorch и OpenCV. Веб-интерфейс на Streamlit, Docker, CI/CD через GitHub Actions.</p>
+      <p>
+        <a href="https://your-streamlit-demo-link" target="_blank">→ Демо</a> |
+        <a href="https://github.com/bragind/satellite-cv" target="_blank">→ GitHub</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>🤖 Интеллектуальный поиск по IT-статьям (RAG)</h3>
+      <p>RAG-система на базе <code>intfloat/multilingual-e5-large</code> и ChromaDB. Поддержка Telegram-бота (aiogram) и веб-интерфейса. Автоматический сбор статей с Habr, CNews, Rusbase.</p>
+      <p>
+        <a href="https://github.com/bragind/rag-it-search" target="_blank">→ GitHub</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>📊 Прогнозирование кредитного дефолта</h3>
+      <p>End-to-end pipeline: сбор данных → очистка → обучение модели → FastAPI → Docker. Версионирование через DVC, тесты, документация.</p>
+      <p>
+        <a href="https://github.com/bragind/credit-risk" target="_blank">→ GitHub</a>
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Образование</h2>
+    <p><strong>NIAU MEPhI</strong> — Магистратура, Прикладная математика и информатика</p>
+    <p>Фокус: машинное обучение, C/C++ в UNIX, распределённые системы, встраиваемые платформы</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Дмитрий Брагин. Все проекты — open source.</p>
+    <p>Резюме обновлено: январь 2026</p>
+  </footer>
+
+</body>
+</html>
