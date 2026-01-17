@@ -13,25 +13,28 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Compile LaTeX with XeLaTeX
+      - name: Compile LaTeX with XeLaTeX inside src/
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: src/resume.tex
+          working_directory: src
+          root_file: resume.tex
           compiler: xelatex
           args: "-interaction=nonstopmode -halt-on-error"
+
+      - name: Copy PDF to root for GitHub Pages
+        run: |
+          cp src/resume.pdf ./resume.pdf
 
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
         with:
           name: resume-pdf
-          path: src/resume.pdf
+          path: resume.pdf
 
-      - name: Commit and push PDF to root (optional, for GitHub Pages)
+      - name: Commit and push PDF to root
         run: |
-          # Копируем PDF в корень, чтобы он был доступен по /resume.pdf
-          cp src/resume.pdf ./resume.pdf
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add resume.pdf
-          git commit -m "Auto-update resume.pdf" || echo "No changes to commit"
+          git commit -m "Auto-update resume.pdf" || echo "No changes"
           git push
