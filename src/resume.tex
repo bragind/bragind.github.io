@@ -1,0 +1,113 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{multicol}
+
+% Шрифт с поддержкой кириллицы
+\setmainfont{Arial} % или Liberation Sans, DejaVu Sans, Times New Roman
+
+% Поля
+\geometry{left=1.2cm, right=1.2cm, top=1.5cm, bottom=1.5cm}
+
+% Стили заголовков
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+% Гиперссылки
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=black
+}
+
+% Отступы списков
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{Брагин Дмитрий}} \\[4pt]
+    \small
+    Пенза \textbar{} 
+    +7 (967) 701-84-12 \textbar{} 
+    \href{mailto:dimanb1982@gmail.com}{dimanb1982@gmail.com} \textbar{} 
+    \href{https://github.com/bragind}{github.com/bragind} \\
+    Гражданство: Россия \textbar{} Удалённая работа
+\end{center}
+
+\vspace{8pt}
+
+\section*{Цель}
+Инженер с 16+ годами опыта в IT, в настоящее время специализируюсь на Python, C/C++, Linux, автоматизации и ML. Ищу позицию Backend Developer/ Software Engineer / System Engineer
+
+\section*{Опыт работы}
+\textbf{Ведущий инженер} \hfill Окт 2024 – н.в. \\
+ООО «Интегрированные системы безопасности»
+\begin{itemize}
+    \item Интеграция электронных модулей и встраиваемых блоков в комплексные технические решения.
+    \item Отладка аппаратно-программных интерфейсов: RS-485, Ethernet.
+    \item Автоматизация сбора телеметрии и тестирования с помощью \textbf{Python}, \textbf{Bash} и \textbf{C/C++}.
+    \item Ведение технической документации и взаимодействие с командами разработки ПО и конструкторского отдела.
+\end{itemize}
+
+\textbf{Старший инженер} \hfill Окт 2011 – Окт 2024 \\
+Альфа-Банк (Россия), Москва
+\begin{itemize}
+    \item Обеспечение отказоустойчивости ИТ-инфраструктуры (серверы, сети, мониторинг).
+    \item Диагностика и устранение критических инцидентов.
+    \item Автоматизация операций мониторинга и отчётности на \textbf{Bash/Python}.
+    \item Взаимодействие с внутренними DevOps-командами и вендорами.
+\end{itemize}
+
+\textbf{Администратор вычислительной сети} \hfill Ноя 2009 – Окт 2011 \\
+МФЦ Пензенской области
+\begin{itemize}
+    \item Администрирование корпоративной сети (VLAN, маршрутизация, 50+ рабочих мест).
+    \item Настройка сетевого оборудования и серверов Windows Server.
+\end{itemize}
+
+\section*{Образование}
+\textbf{НИЯУ «МИФИ»}, Москва \hfill 2024–2026 \\
+Магистратура, Прикладная математика и информатика \\
+Специализация: \textit{Машинное обучение}
+
+\textbf{Курсы повышения квалификации (МИФИ, 2025)}:
+\begin{itemize}
+    \item Администрирование Linux
+    \item Программирование на C/C++ в UNIX-подобных системах
+\end{itemize}
+
+\textbf{ПГПУ им. В.Г. Белинского}, Пенза \hfill 2005 \\
+Физико-математический факультет, Физика
+
+\section*{Навыки}
+\begin{multicols}{2}
+\begin{itemize}
+    \item \textbf{Языки}: Python, C/C++, Bash
+    \item \textbf{Системы}: Linux, Docker, Git, CI/CD
+    \item \textbf{ML\DevOps}: Ansible, PostgreSQL, Grafana, MLflow, DVC
+    \item \textbf{ML/DL}: Pandas, NumPy, scikit-learn, PyTorch
+    \item \textbf{Практики}: автоматизация, документирование, тестирование
+\end{itemize}
+\end{multicols}
+
+\section*{Проекты (open source)}
+\begin{itemize}
+    \item \textbf{Анализ COVID-19 по рентгеновским снимкам} — классификация изображений (PyTorch, OpenCV)
+    \item \textbf{Прогнозирование цен на акции} — временные ряды (scikit-learn, PyTorch)
+    \item \textbf{Определение планктона} — CV-классификация подводных изображений
+    \item \textbf{MLOps-пайплайн} — FastAPI, Docker, DVC, GitHub Actions
+    \item Все проекты: \url{https://github.com/bragind}
+\end{itemize}
+
+\section*{Дополнительно}
+Английский — A1 (техническая документация читаю свободно).  
+Интересы: робототехника, автономные системы, автоматизация 
+
+\end{document}
