@@ -1,209 +1,113 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Дмитрий Брагин — ML Engineer</title>
-  <meta name="description" content="Machine Learning Engineer specializing in Computer Vision, MLOps, and Python automation. Portfolio, projects, and resume.">
-  <style>
-    :root {
-      --text: #333;
-      --bg: #fff;
-      --accent: #2563eb;
-      --light-gray: #f5f7fa;
-      --border: #e0e0e0;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      color: var(--text);
-      background-color: var(--bg);
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-    }
-    .subtitle {
-      color: #555;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-    .contacts a {
-      color: var(--accent);
-      text-decoration: none;
-      margin: 0 0.6rem;
-    }
-    .contacts a:hover {
-      text-decoration: underline;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-      color: var(--accent);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.3rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    li {
-      margin-bottom: 0.6rem;
-    }
-    .project {
-      margin-bottom: 1.2rem;
-    }
-    .project h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.4rem;
-    }
-    .tech {
-      display: inline-block;
-      background: var(--light-gray);
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      margin-right: 0.4rem;
-      margin-top: 0.3rem;
-    }
-    .actions {
-      background: var(--light-gray);
-      padding: 1.2rem;
-      border-radius: 8px;
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .actions a {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
-      padding: 0.6rem 1.2rem;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      margin: 0 0.5rem;
-    }
-    .actions a:hover {
-      opacity: 0.9;
-    }
-    footer {
-      text-align: center;
-      color: #777;
-      font-size: 0.9rem;
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-    }
-    @media (max-width: 600px) {
-      body { padding: 1.2rem 0.8rem; }
-      h1 { font-size: 1.8rem; }
-      .actions a { display: block; margin: 0.6rem 0; }
-    }
-  </style>
-</head>
-<body>
+\documentclass[10pt,a4paper]{article}
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{multicol}
 
-  <header>
-    <h1>Дмитрий Брагин</h1>
-    <div class="subtitle">ML Engineer • Computer Vision • MLOps • Python</div>
-    <div class="contacts">
-      <a href="mailto:dimanb1982@gmail.com">📧 Email</a>
-      <a href="https://github.com/bragind" target="_blank">🐙 GitHub</a>
-      <a href="https://t.me/DmitiyBragin" target="_blank">💬 Telegram</a>
-    </div>
-  </header>
+% Шрифт с поддержкой кириллицы
+\setmainfont{Arial} % или Liberation Sans, DejaVu Sans, Times New Roman
 
-  <div class="actions">
-    <a href="resume.pdf" target="_blank">📄 Скачать PDF-резюме</a>
-    <a href="https://github.com/bragind" target="_blank">📁 Все проекты на GitHub</a>
-  </div>
+% Поля
+\geometry{left=1.2cm, right=1.2cm, top=1.5cm, bottom=1.5cm}
 
-  <section>
-    <h2>Ключевые навыки</h2>
-    <p>
-      <span class="tech">Python</span>
-      <span class="tech">C/C++</span>
-      <span class="tech">PyTorch</span>
-      <span class="tech">OpenCV</span>
-      <span class="tech">Computer Vision</span>
-      <span class="tech">MLOps</span>
-      <span class="tech">Docker</span>
-      <span class="tech">CI/CD</span>
-      <span class="tech">FastAPI</span>
-      <span class="tech">Linux</span>
-      <span class="tech">LLM / RAG</span>
-      <span class="tech">ROS2</span>
-      <span class="tech">STM32</span>
-    </p>
-  </section>
+% Стили заголовков
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
 
-  <section>
-    <h2>Проекты</h2>
+% Гиперссылки
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=black
+}
 
-    <div class="project">
-      <h3>Article-agent</h3>
-      <p>AI RAG-агент для интеллектуального поиска и анализа статей технологических СМИ. Проект создан для Cloud.ru в рамках хакатона по разработке MVP AI-агента на основе RAG-архитектуры.</p>
-      <p><a href="https://github.com/bragind/article-agent" target="_blank">→ GitHub</a></p>
-    </div>
+% Отступы списков
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
 
-    <div class="project">
-      <h3>📊 Прогнозирование дефолта по кредитной карте</h3>
-      <p>End-to-end MLOps-пайплайн для прогнозирования вероятности дефолта по кредитной карте на основе датасета UCI Default of Credit Card Clients. Проект реализует полный жизненный цикл ML: от валидации данных и экспериментов до развертывания модели и мониторинга — включая нейросетевое обучение и развёртывание в VK Cloud.</p>
-      <p><a href="https://github.com/bragind/client_defolt_project" target="_blank">→ GitHub</a></p>
-    </div>
+\begin{document}
 
-    <div class="project">
-      <h3>Plankton Classification — пайплайн классификации изображений планктона</h3>
-      <p>Цель: Построить и исследовать пайплайн классификации изображений, обеспечивающий устойчивое качество на малом и несбалансированном датасете, а также провести сравнительный анализ различных стратегий обучения нейронных сетей.</p>
-      <p><a href="https://github.com/bragind/plankton_classification" target="_blank">→ GitHub</a></p>
-    </div>
+\begin{center}
+    {\LARGE \textbf{Брагин Дмитрий}} \\[4pt]
+    \small
+    Пенза \textbar{} 
+    +7 (967) 701-84-12 \textbar{} 
+    \href{mailto:dimanb1982@gmail.com}{dimanb1982@gmail.com} \textbar{} 
+    \href{https://github.com/bragind}{github.com/bragind} \\
+    Гражданство: Россия \textbar{} Удалённая работа
+\end{center}
 
-    <div class="project">
-      <h3>Анализ метаданных рентгеновских снимков при COVID-19</h3>
-      <p>Полный цикл анализа открытого набора данных covid-chestxray-dataset — от загрузки и очистки до SQL-аналитики и визуализации.</p>
-      <p><a href="https://github.com/bragind/covid19-analisis" target="_blank">→ GitHub</a></p>
-    </div>
+\vspace{8pt}
 
-    <div class="project">
-      <h3>Телеграм-бот для прогнозирования акций</h3>
-      <p>Бот загружает данные с Yahoo Finance, обучает 3 модели (Random Forest, Prophet, LSTM), выбирает лучшую по MAPE и выдаёт график прогноза на 30 дней, рекомендации по покупке/продаже и расчёт условной прибыли.</p>
-      <p><a href="https://github.com/bragind/stock_forecast_bot" target="_blank">→ GitHub</a></p>
-    </div>
-  </section>
+\section*{Цель}
+Инженер с 16+ годами опыта в IT, в настоящее время специализируюсь на Python, C/C++, Linux, автоматизации и ML. Ищу позицию Backend Developer/ Software Engineer / System Engineer
 
-  <section>
-    <h2>Образование</h2>
-    <p><strong>НИЯУ МИФИ, Институт интеллектуальных кибернетических систем</strong> — магистратура, окончание в 2026 г., направление «Прикладная математика и информатика», специализация «Машинное обучение»</p>
-    <p><strong>НИЯУ МИФИ, Цифровая кафедра</strong> — профессиональная переподготовка, 2025 г., «Программирование на С/С++ в среде Unix-подобных ОС»</p>
-    <p><strong>Пензенский государственный педагогический университет им. В.Г. Белинского</strong> — специалитет, 2005 г., физика</p>
-  </section>
+\section*{Опыт работы}
+\textbf{Ведущий инженер} \hfill Окт 2024 – н.в. \\
+ООО «Интегрированные системы безопасности»
+\begin{itemize}
+    \item Интеграция электронных модулей и встраиваемых блоков в комплексные технические решения.
+    \item Отладка аппаратно-программных интерфейсов: RS-485, Ethernet.
+    \item Автоматизация сбора телеметрии и тестирования с помощью \textbf{Python}, \textbf{Bash} и \textbf{C/C++}.
+    \item Ведение технической документации и взаимодействие с командами разработки ПО и конструкторского отдела.
+\end{itemize}
 
-  <section>
-    <h2>Курсы</h2>
-    <p><strong>НИЯУ МИФИ</strong> — Администрирование Linux, 2025</p>
-    <p><strong>НИЯУ МИФИ</strong> — Технологии DevOps</p>
-  </section>
+\textbf{Старший инженер} \hfill Окт 2011 – Окт 2024 \\
+Альфа-Банк (Россия), Москва
+\begin{itemize}
+    \item Обеспечение отказоустойчивости ИТ-инфраструктуры (серверы, сети, мониторинг).
+    \item Диагностика и устранение критических инцидентов.
+    \item Автоматизация операций мониторинга и отчётности на \textbf{Bash/Python}.
+    \item Взаимодействие с внутренними DevOps-командами и вендорами.
+\end{itemize}
 
-  <footer>
-    <p>© 2026 Дмитрий Брагин</p>
-    <p>Резюме обновлено: январь 2026</p>
-  </footer>
+\textbf{Администратор вычислительной сети} \hfill Ноя 2009 – Окт 2011 \\
+МФЦ Пензенской области
+\begin{itemize}
+    \item Администрирование корпоративной сети (VLAN, маршрутизация, 50+ рабочих мест).
+    \item Настройка сетевого оборудования и серверов Windows Server.
+\end{itemize}
 
-</body>
-</html>
+\section*{Образование}
+\textbf{НИЯУ «МИФИ»}, Москва \hfill 2024–2026 \\
+Магистратура, Прикладная математика и информатика \\
+Специализация: \textit{Машинное обучение}
+
+\textbf{Курсы повышения квалификации (МИФИ, 2025)}:
+\begin{itemize}
+    \item Администрирование Linux
+    \item Программирование на C/C++ в UNIX-подобных системах
+\end{itemize}
+
+\textbf{ПГПУ им. В.Г. Белинского}, Пенза \hfill 2005 \\
+Физико-математический факультет, Физика
+
+\section*{Навыки}
+\begin{multicols}{2}
+\begin{itemize}
+    \item \textbf{Языки}: Python, C/C++, Bash
+    \item \textbf{Системы}: Linux, Docker, Git, CI/CD
+    \item \textbf{DevOps}: Ansible, PostgreSQL, Grafana, MLflow, DVC
+    \item \textbf{ML/DL}: Pandas, NumPy, scikit-learn, PyTorch
+    \item \textbf{Практики}: автоматизация, документирование, тестирование
+\end{itemize}
+\end{multicols}
+
+\section*{Проекты (open source)}
+\begin{itemize}
+    \item \textbf{Анализ COVID-19 по рентгеновским снимкам} — классификация изображений (PyTorch, OpenCV)
+    \item \textbf{Прогнозирование цен на акции} — временные ряды (scikit-learn, PyTorch)
+    \item \textbf{Определение планктона} — CV-классификация подводных изображений
+    \item \textbf{MLOps-пайплайн} — FastAPI, Docker, DVC, GitHub Actions
+    \item Все проекты: \url{https://github.com/bragind}
+\end{itemize}
+
+\section*{Дополнительно}
+Английский — A1 (техническая документация читаю свободно).  
+Интересы: робототехника, автономные системы, этика ИИ, автоматизация (LaTeX, Make).
+
+\end{document}
