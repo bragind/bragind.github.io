@@ -3,206 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Дмитрий Брагин — Python Backend Developer & AI Integration</title>
-  <meta name="description" content="Backend developer specializing in Python, FastAPI, and AI/ML integration. Open-source projects in RAG, MLOps, and time series forecasting.">
+  <title>Дмитрий Брагин — Embedded & Autonomous Systems Engineer</title>
+  <meta name="description" content="Дмитрий Брагин — инженер-разработчик автономных систем. C/C++, Embedded Systems, ROS 2, sensor fusion, Qt/QML, Linux, UAV и marine robotics.">
   <style>
-    :root {
-      --text: #333;
-      --bg: #fff;
-      --accent: #2563eb;
-      --light-gray: #f5f7fa;
-      --border: #e0e0e0;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      color: var(--text);
-      background-color: var(--bg);
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-    }
-    .subtitle {
-      color: #555;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-    .contacts a {
-      color: var(--accent);
-      text-decoration: none;
-      margin: 0 0.6rem;
-    }
-    .contacts a:hover {
-      text-decoration: underline;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-      color: var(--accent);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.3rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    li {
-      margin-bottom: 0.6rem;
-    }
-    .project {
-      margin-bottom: 1.2rem;
-    }
-    .project h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.4rem;
-    }
-    .tech {
-      display: inline-block;
-      background: var(--light-gray);
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      margin-right: 0.4rem;
-      margin-top: 0.3rem;
-    }
-    .actions {
-      background: var(--light-gray);
-      padding: 1.2rem;
-      border-radius: 8px;
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .actions a {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
-      padding: 0.6rem 1.2rem;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      margin: 0 0.5rem;
-    }
-    .actions a:hover {
-      opacity: 0.9;
-    }
-    footer {
-      text-align: center;
-      color: #777;
-      font-size: 0.9rem;
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-    }
-    @media (max-width: 600px) {
-      body { padding: 1.2rem 0.8rem; }
-      h1 { font-size: 1.8rem; }
-      .actions a { display: block; margin: 0.6rem 0; }
+    :root { --text:#222; --muted:#5f6368; --bg:#fff; --accent:#222; --light-gray:#f5f6f7; --border:#dcdfe3; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; line-height:1.65; color:var(--text); background:var(--bg); padding:2rem 1rem; max-width:920px; margin:0 auto; }
+    header { margin-bottom:2rem; padding-bottom:1.5rem; border-bottom:1px solid var(--border); }
+    h1 { font-size:2.3rem; margin-bottom:.35rem; }
+    .subtitle { color:var(--muted); font-size:1.15rem; margin-bottom:1rem; }
+    .contacts a { color:var(--text); text-decoration:none; margin-right:1.2rem; }
+    .contacts a:hover { text-decoration:underline; }
+    section { margin-bottom:2.2rem; }
+    h2 { font-size:1.35rem; margin-bottom:.9rem; border-bottom:1px solid var(--border); padding-bottom:.35rem; }
+    h3 { font-size:1.12rem; margin-bottom:.3rem; }
+    p { margin-bottom:.65rem; }
+    ul { padding-left:1.25rem; }
+    li { margin-bottom:.35rem; }
+    .lead { font-size:1.05rem; max-width:820px; }
+    .actions { margin:1.5rem 0 2.2rem; }
+    .actions a { display:inline-block; background:var(--accent); color:#fff; padding:.55rem 1rem; text-decoration:none; border-radius:4px; font-weight:600; margin-right:.6rem; }
+    .project { margin-bottom:1.6rem; }
+    .project a, section a { color:#333; }
+    .tech { display:inline-block; background:var(--light-gray); border:1px solid #e7e9ec; padding:.18rem .5rem; border-radius:4px; font-size:.9rem; margin:.2rem .25rem .2rem 0; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.2rem 2rem; }
+    .note { background:var(--light-gray); border-left:3px solid #888; padding:1rem 1.1rem; margin:1rem 0; }
+    pre { background:var(--light-gray); border:1px solid #e7e9ec; padding:1rem; overflow-x:auto; border-radius:4px; font-size:.9rem; }
+    footer { color:var(--muted); font-size:.9rem; margin-top:2.5rem; padding-top:1.3rem; border-top:1px solid var(--border); }
+    @media (max-width:650px) {
+      body { padding:1.2rem .8rem; } h1 { font-size:1.85rem; }
+      .grid { grid-template-columns:1fr; }
+      .actions a { display:block; margin:.55rem 0; text-align:center; }
+      .contacts a { display:inline-block; margin-bottom:.4rem; }
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>Дмитрий Брагин</h1>
-    <div class="subtitle">Python Backend Developer • AI Integration • MLOps</div>
-    <div class="contacts">
-      <a href="mailto:dimanb1982@gmail.com">📧 Email</a>
-      <a href="https://github.com/bragind" target="_blank">🐙 GitHub</a>
-      <a href="https://t.me/DmitiyBragin" target="_blank">💬 Telegram</a>
-    </div>
-  </header>
-
-  <div class="actions">
-    <a href="resume.pdf" target="_blank">📄 Скачать PDF-резюме</a>
-    <a href="https://github.com/bragind" target="_blank">📁 Все проекты на GitHub</a>
+<header>
+  <h1>Дмитрий Брагин</h1>
+  <div class="subtitle">Embedded & Autonomous Systems Engineer</div>
+  <p class="lead">C/C++ · Embedded Systems · ROS 2 · Sensor Fusion · Qt/QML · Linux · UAV / Marine Robotics</p>
+  <div class="contacts">
+    <a href="mailto:dimanb1982@gmail.com">Email</a>
+    <a href="https://github.com/bragind" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://t.me/DmitiyBragin" target="_blank" rel="noopener">Telegram</a>
   </div>
+</header>
 
-  <section>
-    <h2>Ключевые навыки</h2>
-    <p>
-      <span class="tech">Python (основной)</span>
-      <span class="tech">C/C++ (второй, embedded/system)</span>
-      <span class="tech">FastAPI</span>
-      <span class="tech">Docker</span>
-      <span class="tech">CI/CD</span>
-      <span class="tech">LLM / RAG</span>
-      <span class="tech">Linux</span>
-      <span class="tech">PyTorch</span>
-      <span class="tech">PostgreSQL</span>
-      <span class="tech">Git</span>
-      <span class="tech">MLflow</span>
-      <span class="tech">DVC</span>
-    </p>
-  </section>
+<div class="actions">
+  <a href="resume.pdf" target="_blank">Скачать PDF-резюме</a>
+  <a href="https://github.com/bragind" target="_blank" rel="noopener">GitHub-проекты</a>
+</div>
 
-  <section>
-    <h2>Проекты</h2>
+<section>
+  <h2>Профиль</h2>
+  <p>Инженер-разработчик, работающий на стыке программного обеспечения, аппаратных систем, математического моделирования и автономных систем.</p>
+  <p>Профессиональный фокус — развитие в направлении <strong>Embedded / Autonomous Systems Engineering</strong>: C/C++, embedded Linux, робототехника, сенсорная интеграция, sensor fusion и автономная навигация.</p>
+  <p>Имею практический инженерный опыт разработки и интеграции аппаратно-программных систем, настройки, испытаний, анализа результатов и подготовки технической документации по ЕСКД.</p>
+  <div class="note"><strong>Основная траектория:</strong><br>Embedded Systems → Robotics → Autonomous Systems → Sensor Fusion → Intelligent Onboard Systems</div>
+</section>
 
-    <div class="project">
-      <h3>Article-agent</h3>
-      <p>AI RAG-агент для интеллектуального поиска и анализа статей технологических СМИ. Проект создан для Cloud.ru в рамках хакатона по разработке MVP AI-агента на основе RAG-архитектуры.</p>
-      <p><a href="https://github.com/bragind/article-agent" target="_blank">→ GitHub</a></p>
+<section>
+  <h2>Ключевые компетенции</h2>
+  <div class="grid">
+    <div><h3>Embedded</h3>
+      <span class="tech">C</span><span class="tech">C++</span><span class="tech">STM32</span><span class="tech">UART</span><span class="tech">SPI</span><span class="tech">I²C</span><span class="tech">CAN</span><span class="tech">FreeRTOS</span><span class="tech">GDB</span><span class="tech">Embedded Linux</span>
     </div>
-
-    <div class="project">
-      <h3>📊 Прогнозирование дефолта по кредитной карте</h3>
-      <p>End-to-end MLOps-пайплайн для прогнозирования вероятности дефолта по кредитной карте на основе датасета UCI Default of Credit Card Clients. Проект реализует полный жизненный цикл ML: от валидации данных и экспериментов до развертывания модели и мониторинга — включая нейросетевое обучение и развёртывание в VK Cloud.</p>
-      <p><a href="https://github.com/bragind/client_defolt_project" target="_blank">→ GitHub</a></p>
+    <div><h3>Robotics & Autonomy</h3>
+      <span class="tech">ROS 2</span><span class="tech">DDS</span><span class="tech">MAVLink</span><span class="tech">Pixhawk</span><span class="tech">Sensor Integration</span><span class="tech">Navigation</span>
     </div>
-
-    <div class="project">
-      <h3>Plankton Classification — пайплайн классификации изображений планктона</h3>
-      <p>Цель: Построить и исследовать пайплайн классификации изображений, обеспечивающий устойчивое качество на малом и несбалансированном датасете, а также провести сравнительный анализ различных стратегий обучения нейронных сетей.</p>
-      <p><a href="https://github.com/bragind/plankton_classification" target="_blank">→ GitHub</a></p>
+    <div><h3>Software</h3>
+      <span class="tech">C++17/20/23</span><span class="tech">Python</span><span class="tech">Qt</span><span class="tech">QML</span><span class="tech">CMake</span><span class="tech">Linux</span><span class="tech">Git</span><span class="tech">CI/CD</span>
     </div>
-
-    <div class="project">
-      <h3>Анализ метаданных рентгеновских снимков при COVID-19</h3>
-      <p>Полный цикл анализа открытого набора данных covid-chestxray-dataset — от загрузки и очистки до SQL-аналитики и визуализации.</p>
-      <p><a href="https://github.com/bragind/covid19-analisis" target="_blank">→ GitHub</a></p>
+    <div><h3>Mathematical & AI Methods</h3>
+      <span class="tech">Kalman Filter</span><span class="tech">EKF</span><span class="tech">Sensor Fusion</span><span class="tech">Numerical Methods</span><span class="tech">Machine Learning</span><span class="tech">Computer Vision</span><span class="tech">Edge AI</span>
     </div>
+  </div>
+</section>
 
-    <div class="project">
-      <h3>Телеграм-бот для прогнозирования акций</h3>
-      <p>Бот загружает данные с Yahoo Finance, обучает 3 модели (Random Forest, Prophet, LSTM), выбирает лучшую по MAPE и выдаёт график прогноза на 30 дней, рекомендации по покупке/продаже и расчёт условной прибыли.</p>
-      <p><a href="https://github.com/bragind/stock_forecast_bot" target="_blank">→ GitHub</a></p>
-    </div>
-  </section>
+<section>
+  <h2>Избранные проекты</h2>
+  <div class="project">
+    <h3>swarm_sim_ws — Multi-agent Autonomous Robotic Systems</h3>
+    <p>Исследовательский и инженерный проект по распределённому управлению и принятию решений роем роботизированных платформ при ограниченной коммуникации и неполной наблюдаемости.</p>
+    <p><strong>Стек:</strong> C++, Python, ROS 2, DDS, multi-agent systems, distributed decision-making, simulation, metrics.</p>
+    <p><strong>Интеллектуальная собственность:</strong> подана заявка в Роспатент на регистрацию прав на программное обеспечение.</p>
+    <p><a href="https://github.com/bragind/swarm_sim_ws" target="_blank" rel="noopener">→ GitHub</a></p>
+  </div>
+  <div class="project">
+    <h3>MarineDashboard — Marine Instrumentation & Navigation</h3>
+    <p>C++/Qt/QML-приложение для работы с морскими навигационными и телеметрическими данными. Включает инспекцию NMEA, RMC, глубины/DBT и навигационно-ориентированное представление данных.</p>
+    <p><strong>Стек:</strong> C++, Qt 6, QML, CMake, NMEA, telemetry.</p>
+    <p><a href="https://github.com/bragind/MarineDashboard" target="_blank" rel="noopener">→ GitHub</a></p>
+  </div>
+  <div class="project">
+    <h3>fusion-platform — Industrial Sensor Fusion Platform</h3>
+    <p>Платформа мультисенсорного слияния данных с математическим ядром на основе EKF. Проект ориентирован на синхронизацию измерений, архитектуру обработки и оценку состояния.</p>
+    <p><strong>Стек:</strong> C++17, Python, Eigen, EKF, sensor synchronization, CMake, testing.</p>
+    <p><a href="https://github.com/bragind/fusion-platform" target="_blank" rel="noopener">→ GitHub</a></p>
+  </div>
+  <div class="project">
+    <h3>MultiRotorCalc — UAV Engineering Calculations</h3>
+    <p>Инструментарий инженерных расчётов для конфигураций мультикоптеров: масса, тяговооружённость, мощность висения, режимы полёта, маршрут и оптимизация параметров.</p>
+    <p><strong>Стек:</strong> Python, numerical methods, engineering modeling, testing.</p>
+    <p><a href="https://github.com/bragind/MultiRotorCalc" target="_blank" rel="noopener">→ GitHub</a></p>
+  </div>
+</section>
 
-  <section>
-    <h2>Образование</h2>
-    <p><strong>НИЯУ МИФИ, Институт интеллектуальных кибернетических систем</strong> — магистратура, окончание в 2026 г., направление «Прикладная математика и информатика», специализация «Машинное обучение»</p>
-    <p><strong>НИЯУ МИФИ, Цифровая кафедра</strong> — профессиональная переподготовка, 2025 г., «Программирование на С/С++ в среде Unix-подобных ОС»</p>
-    <p><strong>Пензенский государственный педагогический университет им. В.Г. Белинского</strong> — специалитет, 2005 г., физика</p>
-  </section>
+<section>
+  <h2>Исследования и публикации</h2>
+  <p>Исследовательские интересы: многоагентные роботизированные системы, распределённое управление, автономная навигация, sensor fusion, отказоустойчивая навигация, интеллектуальные бортовые системы и автономные морские платформы.</p>
+  <ul>
+    <li><strong>Архитектура управления роем роботизированных платформ на базе ROS 2/DDS</strong> — международный научный журнал «Вестник науки», № 6 (99), 2026.</li>
+    <li><strong>Сценарно-метрическая оценка устойчивости алгоритмов управления роем роботизированных платформ</strong> — журнал «Нефть и газ: опыт и инновации», 2026.</li>
+    <li><strong>Архитектура распределённой бортовой системы управления гетерогенным роем роботизированных платформ</strong> — сборник материалов CXXVII Международной научно-практической конференции «Экспериментальные и теоретические исследования в современной науке», 2026.</li>
+  </ul>
+</section>
 
-  <section>
-    <h2>Курсы</h2>
-    <p><strong>НИЯУ МИФИ</strong> — Администрирование Linux, 2025</p>
-    <p><strong>НИЯУ МИФИ</strong> — Технологии DevOps</p>
-  </section>
+<section>
+  <h2>Инженерный подход</h2>
+  <p>Интересует не только отдельный программный компонент, но и полный контур физической системы:</p>
+  <pre>Sensors
+   ↓
+Data acquisition
+   ↓
+Embedded software
+   ↓
+Signal processing
+   ↓
+Sensor fusion
+   ↓
+State estimation
+   ↓
+Decision making
+   ↓
+Control
+   ↓
+Actuators</pre>
+  <p>Такой подход применим к автономным транспортным средствам, UAV, морской робототехнике, навигационным системам и промышленному оборудованию.</p>
+</section>
 
-  <footer>
-    <p>© 2026 Дмитрий Брагин</p>
-    <p>Резюме обновлено: январь 2026</p>
-  </footer>
+<section>
+  <h2>Образование</h2>
+  <p><strong>НИЯУ МИФИ</strong> — магистратура, «Прикладная математика и информатика», специализация «Машинное обучение», 2024–2026.</p>
+  <p><strong>НИЯУ МИФИ, Цифровая кафедра</strong> — профессиональная переподготовка «Программирование на C/C++ в среде Unix-подобных ОС», 2025.</p>
+  <p><strong>Пензенский государственный педагогический университет</strong> — физика, физико-математический факультет, 2005.</p>
+</section>
 
+<section>
+  <h2>Профессиональное направление</h2>
+  <p><strong>Embedded C/C++ Engineer · Embedded Systems Engineer · Autonomous Systems Engineer · Robotics Software Engineer · Sensor Fusion Engineer · Embedded Linux Engineer</strong></p>
+  <p>Долгосрочная цель: системная разработка интеллектуальных автономных платформ, включая UAV и морскую робототехнику.</p>
+</section>
+
+<footer>
+  <p>© 2026 Дмитрий Брагин</p>
+  <p>Резюме и профиль обновлены: сентябрь 2026</p>
+</footer>
 </body>
 </html>
